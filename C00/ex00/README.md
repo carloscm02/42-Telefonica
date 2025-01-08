@@ -1,7 +1,7 @@
 # ft_putchar
 
 ## Descripción
-**[see it in english 🏴󠁧󠁢󠁥󠁮󠁧󠁿](https://github.com/carloscm02/42-Telefonica/tree/develop/C00/ex00##Description)**
+**[see it in english 🏴󠁧󠁢󠁥󠁮󠁧󠁿](https://github.com/carloscm02/42-Telefonica/blob/main/C00/ex00/README_EN.md)**
 
 `ft_putchar` es una función en C que se utiliza para imprimir un solo carácter en la salida estándar (normalmente la consola).
 

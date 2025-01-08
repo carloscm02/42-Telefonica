@@ -1,6 +1,6 @@
 ## Description
 
-**[ver en español 🇪🇸](https://github.com/carloscm02/42-Telefonica/tree/develop/C00/ex00##Description)**
+**[ver en español 🇪🇸](https://github.com/carloscm02/42-Telefonica/tree/main/C00/ex00)**
 
 `ft_putchar` is a C function used to print a single character to the standard output (usually the console).
 
