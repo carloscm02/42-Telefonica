@@ -1,5 +1,7 @@
+# ft_print_alphabet
+
 ## Description
-**[ver en español 🇪🇸](##Descripción)**
+**[ver en español 🇪🇸](https://github.com/carloscm02/42-Telefonica/tree/main/C00/ex01)**
 
 `ft_print_alphabet` is a C function that prints the lowercase alphabet in ascending order to the standard output (usually the console).
 
