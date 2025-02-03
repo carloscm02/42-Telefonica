@@ -1,7 +1,7 @@
 # ft_print_alphabet
 
 ## Descripción
-**[see it in english 🏴󠁧󠁢󠁥󠁮󠁧󠁿](##Description)**
+**[see it in english 🏴󠁧󠁢󠁥󠁮󠁧󠁿](https://github.com/carloscm02/42-Telefonica/blob/main/C00/ex01/README_EN.md)**
 
 `ft_print_alphabet` es una función en C que imprime el alfabeto en minúsculas en orden ascendente en la salida estándar (normalmente la consola).
 
