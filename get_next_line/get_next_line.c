@@ -6,7 +6,7 @@
 /*   By: ccamaras <ccamaras@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 11:55:52 by ccamaras          #+#    #+#             */
-/*   Updated: 2025/01/28 14:58:12 by ccamaras         ###   ########.fr       */
+/*   Updated: 2025/02/06 17:57:50 by ccamaras         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,32 +66,21 @@ char	*update_position(int fd, char *current_line)
 
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buffer)
-	{
-		free(current_line);
-		return (NULL);
-	}
+		return (free(current_line), NULL);
 	bytes_read = 1;
 	while (!ft_strchr(current_line, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
-		{
-			free(buffer);
-			free(current_line);
-			return (NULL);
-		}
+			return (free(buffer), free(current_line), NULL);
 		buffer[bytes_read] = '\0';
 		temp = ft_strjoin(current_line, buffer);
 		free(current_line);
-		current_line = temp; 
+		current_line = temp;
 		if (!current_line)
-		{
-			free(buffer);
-			return (NULL);
-		}
+			return (free(buffer), NULL);
 	}
-	free(buffer);
-	return (current_line);
+	return (free(buffer), current_line);
 }
 
 char	*get_next_line(int fd)
@@ -106,35 +95,19 @@ char	*get_next_line(int fd)
 	if (!current_line)
 		return (NULL);
 	if (!*current_line)
-	{
-		free(current_line);
-		current_line = NULL;
-		return (NULL);
-	}
+		return (free(current_line), current_line = NULL, NULL);
 	line = ft_strdup(current_line);
 	if (!line)
-	{
-		free(current_line);
-		current_line = NULL;
-		return (NULL);
-	}
-	
+		return (free(current_line), current_line = NULL, NULL);
 	if (ft_strchr(current_line, '\n'))
 	{
 		temp = ft_strdup(ft_strchr(current_line, '\n') + 1);
 		free(current_line);
 		current_line = temp;
 		if (!current_line)
-		{
-			free(line);
-			return (NULL);
-		}
-		line[ft_strlen(line) - ft_strlen(current_line)] = '\0';
+			return (free(line), NULL);
+		return (line[ft_strlen(line) - ft_strlen(current_line)] = '\0', line);
 	}
 	else
-	{
-		free(current_line);
-		current_line = NULL;
-	}
-	return (line);
+		return (free(current_line), current_line = NULL, line);
 }
